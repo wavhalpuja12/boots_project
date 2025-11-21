@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1FUqKNr9orLKUfORVUDztCq8tNfA_nYLSQ&s">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+  <style>
+    .navbar-nav .nav-link:hover {
+      color: #62bfa5;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 5rem;
+      font-weight: 800;
+    }
+
+    .hero-text p {
+      font-size: 1.5rem;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .btn-custom {
+      background-color: #62bfa5;
+      border: none;
+      border-radius: 0%;
+      padding: 5px 30px;
+      font-size: 1.2rem;
+    }
+
+    .btn-custom:hover {
+      background-color: #62bfa5;
+      margin-top: 5px;
+    }
+    .carousel-item {
+      padding: 25px;
+
+    }
+
+    .carousel-item img {
+      height: 80vh;
+      object-fit: cover;
+    }
+
+
+
+    .card,
+    .card img {
+      border-radius: 0 !important;
+    }
+
+    .card {
+
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+
+    }
+
+
+
+    .music-bg {
+      background-image: url("./images/imgi_45_h1-bcgr-img-01.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 100px;
+      position: relative;
+      margin: 30px;
+      border-radius: 0px;
+    }
+
+
+    .music-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+
+
+    .music-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .icon-card img {
+      width: 80px;
+      height: 80px;
+      filter: brightness(0) invert(1);
+      margin-bottom: 10px;
+    }
+
+    .icon-card {
+      transition: all 0.3s ease;
+    }
+
+    .icon-card:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <head>
+
+  </head>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+      <img src="./images/imgi_1_logo-img-01.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+          <li class="nav-item me-5 fs-4 text-success text-opacity-75"><a
+              class="nav-link active  text-success text-opacity-75" href="index.html">Home</a>
+          </li>
+          <li class="nav-item me-5 fs-4"><a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item me-5 fs-4"><a class="nav-link" href="classes.html">Classes</a>
+          </li>
+          <li class="nav-item me-5 fs-4"><a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item me-5 fs-4"><a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <button class="btn btn-custom fs-4">Discover</button>
+
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="./images/back1.jpg" class="d-block w-100" alt="...">
+        <div class="hero-text">
+          <p >Play & learn programs</p>
+          <h1>Kids music school</h1>
+          <button class="btn btn-custom">View more</button>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="./images/imgi_3_p1-title-img-02.jpg" class="d-block w-100" alt="...">
+        <div class="hero-text">
+          <p>Play & learn programs</p>
+          <h1>Kids music school</h1>
+          <button class="btn btn-custom">View more</button>
+        </div>
+      </div>
+      <div class="carousel-item"data-bs-interval="2000">
+        <img src="./images/imgi_3_p2-title-img-02.jpg" class="d-block w-100" alt="...">
+        <div class="hero-text">
+          <p>Play & learn programs</p>
+          <h1>Kids music school</h1>
+          <button class="btn btn-custom">View more</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <section class="py-5 bg-white text-dark">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <p class="text-success  text-opacity-75 fst-italic fs-3 ">Play & learn programs
+        </p>
+        <h2 class="fw-bold fs-1 ">Musical beginnings</h2>
+      </div>
+
+
+      <div class="row g-4 text-center">
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm ">
+            <img src="./images/imgi_3_h1-img-01.jpg" class="card-img-top rounded-3 h-50 " alt="Toddler">
+            <div class="card-body">
+              <h4 class="card-title fw-semibold mt-2">Toddler</h4>
+              <p class="card-text text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore.
+              </p>
+              <h6>Read more</h6>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="./images/imgi_4_h1-img-02.jpg" class="card-img-top rounded-3" alt="Preschooler">
+            <div class="card-body">
+              <h4 class="card-title fw-semibold mt-2">Preschooler</h4>
+              <p class="card-text text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore.
+              </p>
+              <h6>Read more</h6>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="./images/imgi_5_h1-img-03.jpg" class="card-img-top rounded-3" alt="Schooler">
+            <div class="card-body">
+              <h4 class="card-title fw-semibold mt-2">Schooler</h4>
+              <p class="card-text text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore.
+              </p>
+              <h6>Read more</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="music-bg text-center text-white">
+    <div class="container music-content">
+      <p class="fst-italic mb-2">Make a decision</p>
+      <h1 class="fw-bold mb-3">Music Courses</h1>
+      <p class="mb-5 mx-auto" style="max-width: 700px;">
+        Learn your favorite instruments with expert guidance. Choose from a variety of music courses and master your
+        sound.
+      </p>
+
+
+      <div class="row justify-content-center gy-4">
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_6_h1-icon-01.png" alt="Piano">
+            <h6>Piano</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_7_h1-icon-02.png" alt="Guitar">
+            <h6>Guitar</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_8_h1-icon-03.png" alt="Saxophone">
+            <h6>Saxophone</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_9_h1-icon-04.png" alt="Guitar">
+            <h6>Guitar</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_10_h1-icon-05.png" alt="Violin">
+            <h6>Violin</h6>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-center gy-4 mt-4">
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_11_h1-icon-06.png" alt="Trumpet">
+            <h6>Trumpet</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_12_h1-icon-07.png" alt="Drums">
+            <h6>Drums</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_13_h1-icon-08.png" alt="Xilofon">
+            <h6>Xilofon</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_14_h1-icon-09.png" alt="Electric Guitar">
+            <h6>Electric Guitar</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="icon-card">
+            <img src="./images/imgi_15_h1-icon-10.png" alt="Electric Guitar">
+            <h6>Electric Guitar</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container my-5">
+    <div class="row align-items-center g-5">
+
+
+      <div class="col-md-6 position-relative text-center">
+        <img src="./images/imgi_16_h1-video-01.jpg" class="img-fluid rounded-0 p-4" alt="Music class">
+
+
+        <button type="button"
+          class="btn btn-light rounded-circle border position-absolute top-50 start-50 translate-middle shadow">
+          ▶
+        </button>
+      </div>
+
+
+      <div class="col-md-6">
+        <h6 class="text-success fw-semibold text-uppercase mb-2" style="font-family: 'caveat',cursive;"
+          style="background-color: #62bfa5;">Creative curriculum</h6>
+        <h1 class="fw-bold display-3 mb-3">Inspiring classes</h1>
+        <p class="text-secondary large mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea sen
+          commodo consequat. Duis aute irure dolor in prep.
+        </p>
+        <a href="#" class="btn  px-4 py-2 rounded-0" style="background-color: #62bfa5;">View more</a>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="imgback">
+    <div class="row m-3">
+      <div class="col-12">
+        <div class="d-flex justify-content-center align-items-center text-white text-center p-5" style="
+      background-image: url('./images/imgi_46_h1-test-01.jpg');background-size: cover;
+      background-position: center;
+      height: 100vh;">
+          <div>
+            <h1 class="display-4 ">”</h1>
+
+            <p class="fs-5 fst-italic mb-4 ">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<br>
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. <br>Aenean imperdiet. Etiam ultricies
+              nisi vel augue. Curabitur ullamcorper nisi.</p>
+            <h4 class="fw-normal mt-3">Nathan Hunt</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="text-center my-5 ">
+    <div class="container">
+      <h6 class="fst-italic fs-3 text-success text-opacity-75">Group & private lessons</h6>
+      <h1 class="fw-bold mb-4 fs-1">Why our music school</h1>
+      <p class="text-secondary medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod se
+        tempor<br> incididunt ut labore et dolore magna aliqua ut enim ad minim veniam </p>
+
+      <div class="row justify-content-center my-5 g-2">
+
+
+        <div class="col-12 col-md-3">
+          <div class="position-relative mx-auto" style="width: 200px; height: 200px;">
+            <img src="./images/imgi_47_h1-circle-img-01.png" class="img-fluid rounded-circle" alt="circle background">
+            <div class="position-absolute top-50 start-50 translate-middle text-white">
+              <h3 class="fw-bold mb-0 fs-2">140</h3>
+              <p class="mb-0 fst-italic">Students</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-3">
+          <div class="position-relative mx-auto" style="width: 200px; height: 200px;">
+            <img src="./images/imgi_48_h1-circle-img-02.png" class="img-fluid rounded-circle" alt="circle background">
+            <div class="position-absolute top-50 start-50 translate-middle text-white">
+              <h3 class="fw-bold mb-0 fs-2">10</h3>
+              <p class="mb-0 fst-italic">Courses</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-3">
+          <div class="position-relative mx-auto" style="width: 200px; height: 200px;">
+            <img src="./images/imgi_49_h1-circle-img-03.png" class="img-fluid rounded-circle" alt="circle background">
+            <div class="position-absolute top-50 start-50 translate-middle text-white">
+              <h3 class="fw-bold mb-0 fs-2">17</h3>
+              <p class="mb-0  fst-italic">Teachers</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-3">
+          <div class="position-relative mx-auto" style="width: 200px; height: 200px;">
+            <img src="./images/imgi_50_h1-circle-img-04.png" class="img-fluid rounded-circle" alt="circle background">
+            <div class="position-absolute top-50 start-50 translate-middle text-white">
+              <h3 class="fw-bold mb-0 fs-2">36</h3>
+              <p class="mb-0 fst-italic">Awards</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+ <div style="position: fixed; right: 20px; top: 300px; z-index: 9999;">
+
+    <!-- White Box -->
+    <div class="bg-white d-flex align-items-center p-2 shadow mb-2" style="width: 200px;">
+        <h3 class="fw-bold m-2">630+</h3>
+        <span class="ms-2 text-muted">Bridge demos</span>
+    </div>
+
+    <!-- Pink Buy Now Box -->
+    <div class="bg-danger d-flex align-items-center p-2 text-white" style="width: 200px;">
+        <i class="bi bi-bag fs-4 me-2 m-2"></i>
+        <span class="fw-bold">BUY NOW $69</span>
+    </div>
+
+</div>
+
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="row text-start m-5">
+        <div class="col-md-3 mb-4">
+          <img src="./images/imgi_18_logo-footer-img-01.png" alt="">
+          <p class="text-secondary small">© Copyright Qode Interactive<br>275 Grasselli Street,
+            Manchester<br>603-369-5783, 603-385-8019</p>
+          <div>
+            <i class="bi bi-facebook me-2"></i>
+            <i class="bi bi-instagram me-2"></i>
+            <i class="bi bi-twitter"></i>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6 class="fw-bold">About school</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li>Home</li>
+            <li>About</li>
+            <li>Classes</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6 class="fw-bold">Popular courses</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li>Electric guitar</li>
+            <li>Saxophone</li>
+            <li>Piano</li>
+            <li>Accordion</li>
+            <li>Drums</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6 class="fw-bold">Instagram</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
